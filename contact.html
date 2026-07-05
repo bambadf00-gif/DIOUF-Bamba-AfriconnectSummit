@@ -31,145 +31,200 @@
     </header>
     <main>
         <section>
-            <h1>Inscription & Contact</h1>
-            <span><a href="index.html">Accueil</a> > Contact</span>
+            <div class="container">
+                <div class="heroConatact">
+                    <span><a href="index.html">Accueil</a> > Contact</span>
+                    <h1>Inscription & Contact</h1>
+                    <p>
+                        Réservez votre place ou posez-nous vos questions — l'équipe AfriConnect vous répond sous 48h.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container sectionContact">
+                <form action="">
+                    <div class="sectContact">
+                        <label for="">Nom Complet *</label>
+                        <input type="text" placeholder="Habraham linkone">
+                    </div>
+                    <div class="sectContact">
+                        <label for="">Adresse mail *</label>
+                        <input type="email" placeholder="exemple@gmail.com">
+                    </div>
+                    <div class="sectContact">
+                        <label for="">Numero de telephone *</label>
+                        <input type="tel" placeholder="+221 78 888 00 99">
+                    </div>
+                    <div class="sectContact">
+                        <label for="">Type de participation *</label>
+                        <select name="">
+                            <option value="">===Sélectionner un type===</option>
+                            <option value="">Participant Standard (Accès conférences)</option>
+                            <option value="">Premium Pass (Conférences + Workshops)</option>
+                            <option value="">Étudiant / Chercheur</option>
+                            <option value="">Investisseur / Corporate</option>
+                        </select>
+                    </div>
+                    <div class="sectContact">
+                        <label for="">Pays d'Afrique d'origine *</label>
+                        <select name="">
+                            <option value="">Sénégal</option>
+                            <option value="">Mali</option>
+                            <option value="">Côte d'Ivoire</option>
+                            <option value="">Cameroun</option>
+                            <option value="">Bénin</option>
+                            <option value="">Togo</option>
+                            <option value="">Burkina Faso</option>
+                            <option value="">Maroc</option>
+                            <option value="">Tunisie</option>
+                            <option value="">Gabon</option>
+                        </select>
+                    </div>
+                    <div class="sectContact">
+                        <label for="message">Message / Motivations *</label>
+                        <textarea placeholder="Pourquoi souhaitez-vous participer ?"></textarea>
+                    </div>
+                    <div class="btnSendInscription">
+                        <button>Envoyer mon inscription</button>
+                    </div>
+                </form>
+                <div class="parAdr">
+                    <div class="adr">
+                        <div>
+                            <i class="bi bi-house"></i>
+                        </div>
+                        <div>
+                            <strong>Lieu</strong>
+                            <p>Centre International de Conférences, Diamniadio, Dakar</p>
+                        </div>
+                    </div>
+                    <div class="adr">
+                        <div>
+                            <i class="bi bi-calendar"></i>
+                        </div>
+                        <div>
+                            <strong>Dates</strong>
+                            <p>10 — 12 Mars 2027</p>
+                        </div>
+                    </div>
+                    <div class="adr">
+                        <div>
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div>
+                            <strong>Email</strong>
+                            <p>contact@africonnectsummit.africa</p>
+                        </div>
+                    </div>
+                    <div class="adr">
+                        <div>
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div>
+                            <strong>Téléphone</strong>
+                            <p>+221 33 800 00 00</p>
+                        </div>
+                    </div>
+                    <div class="iframSec">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491292.5899650402!2d-23.69201659062501!3d15.844853750725772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9358f2159115131%3A0x6b1af236f918ea1f!2sCabo%20Verde!5e0!3m2!1sen!2ssn!4v1783252467214!5m2!1sen!2ssn"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section>
-            <form action="">
-                <div>
-                    <label for="">Nom Complet</label>
-                    <input type="text" placeholder="Habraham linkone" required>
-                </div>
-                <div>
-                    <div>
-                        <label for="">Adresse mail</label>
-                        <input type="email" placeholder="exemple@gmail.com" required>
-                    </div>
-                    <div>
-                        <label for="">Numero de telephone</label>
-                        <input type="tel" placeholder="+221 78 888 00 99" required>
-                    </div>
-                </div>
-                <div>
-                    <label for="">Type de participation</label>
-                    <select name="" required>
-                        <option value="">===Sélectionner un type...===</option>
-                        <option value="">Participant Standard (Accès conférences)</option>
-                        <option value="">Premium Pass (Conférences + Workshops)</option>
-                        <option value="">Étudiant / Chercheur</option>
-                        <option value="">Investisseur / Corporate</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="">Pays d'Afrique d'origine</label>
-                    <select name="" required>
-                        <option value="">Sénégal</option>
-                        <option value="">Mali</option>
-                        <option value="">Côte d'Ivoire</option>
-                        <option value="">Cameroun</option>
-                        <option value="">Bénin</option>
-                        <option value="">Togo</option>
-                        <option value="">Burkina Faso</option>
-                        <option value="">Maroc</option>
-                        <option value="">Tunisie</option>
-                        <option value="">Gabon</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="message">Message / Motivations (Pourquoi souhaitez-vous participer ?)</label>
-                    <textarea placeholder="ecrit votre demnde" required></textarea>
-                </div>
-                <div>
-                    <button>envoyer</button>
-                </div>
-            </form>
-        </section>
+            <div class="container">
+                <div class="faq">
+                    <h2>Foire Aux Questions (FAQ)</h2>
 
-        <section>
-            <h2>Foire Aux Questions (FAQ)</h2>
-
-            <div>
-                <div>
-                    <input type="checkbox">
-                    <label for="">
-                        Qui peut participer ?
-                        <span></span>
-                    </label>
                     <div>
-                        <p>
-                            Toute personne intéressée par la tech et l’innovation en Afrique.
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">
-                            L’événement est-il payant ?
-                            <span></span>
-                        </label>
                         <div>
-                            <p>
-                                Oui, avec des passes standards et premium.
-                            </p>
+                            <input type="checkbox">
+                            <label for="">
+                                Qui peut participer ?
+                                <span></span>
+                            </label>
+                            <div>
+                                <p>
+                                    Toute personne intéressée par la tech et l’innovation en Afrique.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">
-                            Le sommet est-il en présentiel ?
-                            <span></span>
-                        </label>
                         <div>
-                            <p>
-                                Oui, avec certaines sessions retransmises en ligne.
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">
-                            Puis-je devenir sponsor ?
-                            <span></span>
-                        </label>
-                        <div>
-                            <p>
-                                Oui, contactez-nous via le formulaire.
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">
-                            Un certificat est-il délivré ?
-                            <span></span>
-                        </label>
-                        <div>
-                            <p>
-                                Oui, à la fin de l’événement.
-                            </p>
+                            <div>
+                                <input type="checkbox">
+                                <label for="">
+                                    L’événement est-il payant ?
+                                    <span></span>
+                                </label>
+                                <div>
+                                    <p>
+                                        Oui, avec des passes standards et premium.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                <label for="">
+                                    Le sommet est-il en présentiel ?
+                                    <span></span>
+                                </label>
+                                <div>
+                                    <p>
+                                        Oui, avec certaines sessions retransmises en ligne.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                <label for="">
+                                    Puis-je devenir sponsor ?
+                                    <span></span>
+                                </label>
+                                <div>
+                                    <p>
+                                        Oui, contactez-nous via le formulaire.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                <label for="">
+                                    Un certificat est-il délivré ?
+                                    <span></span>
+                                </label>
+                                <div>
+                                    <p>
+                                        Oui, à la fin de l’événement.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
         </section>
 
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27140928.004326493!2d82.73292976580663!3d33.8612733442741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChina!5e0!3m2!1sen!2ssn!4v1783119576693!5m2!1sen!2ssn"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <section>
+
+        </section>
     </main>
     <footer>
-        <div>
-            <div>
-                <h1>AfriConnect</h1>
+        <div class="container">
+            <div class="fotterLogo">
+                <a href="#" class="logo">
+                    <img src="image/logo1.png" alt="">
+                </a>
                 <p>
                     Le plus grand rassemblement de développeurs, entrepreneurs et investisseurs du continent
                 </p>
             </div>
             <div>
                 <h2>contact</h2>
-                <div>
+                <div class="contfooter">
                     <div>
                         <i class="bi bi-telephone"></i>
                     </div>
@@ -178,7 +233,7 @@
                         <span>78 123 44 55</span>
                     </div>
                 </div>
-                <div>
+                <div class="contfooter">
                     <div>
                         <i class="bi bi-envelope"></i>
                     </div>
@@ -187,7 +242,7 @@
                         <span>ContctAfriconnect@gmail.com</span>
                     </div>
                 </div>
-                <div>
+                <div class="contfooter">
                     <div>
                         <i class="bi bi-globe-europe-africa"></i>
                     </div>
@@ -199,20 +254,20 @@
             </div>
             <div>
                 <h2>Lien reseaux social</h2>
-                <div>
-                    <a href="#">
+                <div class="linkSocial">
+                    <a href="#" class="instagram">
                         <i class="bi bi-instagram"></i>
                         Intagrame
                     </a>
-                    <a href="#">
+                    <a href="#" class="instagram">
                         <i class="bi bi-twitter-x"></i>
                         twitter-x
                     </a>
-                    <a href="#">
+                    <a href="#" class="instagram">
                         <i class="bi bi-facebook"></i>
                         facebook
                     </a>
-                    <a href="#">
+                    <a href="#" class="instagram">
                         <i class="bi bi-youtube"></i>
                         youtube
                     </a>
@@ -220,7 +275,8 @@
             </div>
         </div>
     </footer>
-    <button>
+
+    <button class="btnremonte">
         <i class="bi bi-arrow-up"></i>
     </button>
 
