@@ -92,6 +92,22 @@ h5 {
     font-family: var(--font-Titel);
 }
 
+/* h1 {
+    font-size: clamp(2rem, 4.5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 3.5rem);
+}
+
+h3 {
+    font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+}
+
+h4 {
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+} */
+
 button {
     cursor: pointer;
 }
@@ -104,9 +120,6 @@ li {
     list-style-type: none;
 }
 
-/* section {
-    min-height: 100vh;
-} */
 
 header {
     display: flex;
@@ -158,7 +171,6 @@ img {
     width: 100%;
     padding-right: 3.5rem;
     padding-left: 3.5rem;
-
 }
 
 /* hero */
@@ -237,7 +249,6 @@ img {
     grid-area: grid1;
     display: flex;
     align-items: center;
-
     gap: var(--gap);
     backdrop-filter: blur(10px);
     border: .5px solid var(--bg-main);
@@ -490,8 +501,6 @@ img {
 }
 
 .btnIntervenant {
-    /* display: flex;
-    justify-content: center; */
     margin-top: 4em;
     margin-bottom: 4em;
 }
@@ -585,7 +594,6 @@ img {
 ========================================= */
 .heroConatact {
     padding-top: 12rem;
-    /* border-bottom: 2px solid var(--text-main); */
     padding-bottom: 5em;
 }
 
@@ -612,6 +620,7 @@ select {
     padding: 0.5em;
     font-size: 1em;
     outline: none;
+    width: 100%;
     border-radius: var(--radius-sm);
     border: 1px solid var(--btn-primary);
 }
@@ -770,23 +779,30 @@ iframe {
     border-radius: var(--radius-sm);
     background: linear-gradient(to bottom, #c2185c61, #c2185caf);
 }
-.tab{
+
+.tab {
     min-height: 100vh;
     padding-top: 3em;
+    overflow-x: auto;
 }
-table{
+
+table {
     width: 100%;
     height: 100%;
     box-shadow: 0 0 5px #0D0A12;
     border-collapse: collapse;
+    min-width: 600px;
+    width: 100%;
 
 }
-table thead{
+
+table thead {
     background-color: var(--color-accent);
 }
-table thead th{
-    padding-top:1em;
-    padding-bottom:1em ;
+
+table thead th {
+    padding-top: 1em;
+    padding-bottom: 1em;
     padding-left: 2em;
     text-align: left;
     font-weight: bold;
@@ -794,31 +810,18 @@ table thead th{
     font-size: larger;
 }
 
-table tbody td{
+table tbody td {
     padding: 2em;
     font-weight: bold;
 }
 
-.tr1{
+.tr1 {
     background-color: #f0629129;
 }
-.tr2{
+
+.tr2 {
     background-color: #f06291a6;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* =============footer ============ */
 footer {
@@ -853,7 +856,7 @@ footer h2 {
 .contfooter {
     display: flex;
     padding-bottom: 2em;
-    gap: var(--gap);
+    gap: 0.4em;
 }
 
 .instagram {
@@ -871,4 +874,535 @@ footer h2 {
     position: fixed;
     bottom: 20px;
     right: 20px;
+}
+
+/* ==================================
+======responsivite mediaqurie======== 
+=====================================*/
+
+/*=============================
+ ===========mobile=============
+ ============================== */
+.burger {
+    display: none;
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+}
+
+.btnNavbar {
+    display: flex;
+}
+
+@media (max-width: 640px) {
+
+    .container {
+        width: 100%;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .logo img {
+        width: 30vw;
+    }
+
+    .link {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        color: #0D0A12;
+    }
+
+    .btnHero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    .compteur {
+        display: grid;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 0;
+        padding: 1.4em;
+    }
+
+    .grid2 {
+        padding: 1em;
+    }
+
+    .sectionPour {
+        display: flex;
+        flex-direction: column;
+        padding-top: 3em;
+    }
+
+    .sectionPour a {
+        font-size: small;
+    }
+
+    .sectionPour2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sectionPour2 img {
+        width: 55vw;
+    }
+
+    .divGrir2 {
+        padding: 2em;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: var(--bg-card);
+        border-radius: var(--radius-sm);
+    }
+
+    .divGrir2 p {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .divGrir2 img {
+        border-radius: var(--radius-sm);
+    }
+
+    .divGrir3 {
+        padding: 2em;
+        border-radius: var(--radius-sm);
+    }
+
+    .divGrir3 p {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .divGrir3 img {
+        border-radius: var(--radius-sm);
+    }
+
+    .divGrir1 {
+        padding: 2em;
+        border-radius: var(--radius-sm);
+    }
+
+    .divGrir1 p {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .divGrir1 img {
+        border-radius: var(--radius-sm);
+    }
+
+    .dvgrid4Txt2 {
+        font-size: .6em;
+    }
+
+    .sectionPresence {
+        padding-top: 3em;
+    }
+
+    .sectionPresence>div {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--gap);
+        padding-top: 3em;
+    }
+
+    .btnIntervenant {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btnIntervenant a {
+        font-size: small;
+    }
+
+    .sectionSponsors h2 {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .gridPartenaires2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gridPartenaires3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 2em;
+    }
+
+    footer>div {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    /* ================================
+    =========page intervenenant========
+    =================================== */
+    .heroInert {
+        padding-top: 8rem;
+    }
+
+    .heroInert h1 {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .btnsearch {
+        padding-bottom: 3em;
+        padding-top: 2em;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .btnsearch button {
+        padding: .5em;
+        margin-top: 0;
+        flex-shrink: 0;
+    }
+
+    .allIntervenants {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* =================================
+    ============page Programe ==========
+    ==================================== */
+    .heroProg {
+        padding-top: 8rem;
+    }
+
+    .heroProg>h1 {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .btnpro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gap);
+        flex-shrink: 0;
+
+    }
+
+    .btnpro button {
+        flex-shrink: 0;
+        padding: .7em;
+    }
+
+    .sectionThema>div {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--gap);
+        grid-template-areas:
+            "gridThem1"
+            "gridThem2"
+            "gridThem3"
+            "gridThem4"
+        ;
+    }
+
+    /* ===============================
+    ==========Page Contacte===========
+    ================================== */
+    .heroConatact {
+        padding-top: 8rem;
+    }
+
+    .sectionContact {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    .parAdr {
+        gap: 2rem;
+    }
+
+    .adr strong {
+        font-size: 1.1em;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+
+}
+
+/* ================================
+===============tablette============
+=================================== */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .container {
+        width: 100%;
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
+    .logo img {
+        width: 15vw;
+    }
+
+    .link {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        color: #0D0A12;
+    }
+
+    .btnHero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    .compteur {
+        display: grid;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 0;
+        padding: 1.4em;
+    }
+
+    .grid2 {
+        padding: 1em;
+    }
+
+    .sectionPour {
+        display: flex;
+        flex-direction: column;
+        padding-top: 8em;
+    }
+
+    .sectionPour a {
+        width: 50vw;
+    }
+
+    .sectionPour2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "divGrir1 divGrir2"
+            "divGrir3 divGrir4";
+    }
+
+    .sectionPour2 img {
+        width: 30vw;
+    }
+
+    .divGrir2 {
+        padding: 2em;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: var(--bg-card);
+        border-radius: var(--radius-sm);
+    }
+
+    .divGrir2 p {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .divGrir2 img {
+        border-radius: var(--radius-sm);
+    }
+
+    .divGrir3 {
+        padding: 2em;
+        border-radius: var(--radius-sm);
+    }
+
+    .divGrir3 p {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .divGrir3 img {
+        border-radius: var(--radius-sm);
+    }
+
+    .divGrir1 {
+        padding: 2em;
+        border-radius: var(--radius-sm);
+    }
+
+    .divGrir1 p {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .divGrir1 img {
+        border-radius: var(--radius-sm);
+    }
+
+    .dvgrid4Txt2 {
+        font-size: .6em;
+    }
+
+    .sectionPresence {
+        padding-top: 3em;
+    }
+
+    .sectionPresence>div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gap);
+        padding-top: 3em;
+    }
+
+    .btnIntervenant {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionSponsors h2 {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .gridPartenaires3 {
+        padding-bottom: 2em;
+    }
+
+    footer>div {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    /* ================================
+    =========page intervenenant========
+    =================================== */
+    .heroInert {
+        padding-top: 8rem;
+    }
+
+    .heroInert h1 {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .btnsearch {
+        padding-bottom: 3em;
+        padding-top: 2em;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .btnsearch button {
+        padding: 1em;
+        margin-top: 0;
+        flex-shrink: 0;
+    }
+
+    .allIntervenants {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* =================================
+    ============page Programe ==========
+    ==================================== */
+    .heroProg.heroProg {
+        padding-top: 10rem;
+    }
+
+    .heroProg>h1 {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .btnpro {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--gap);
+        flex-shrink: 0;
+
+    }
+
+    .btnpro button {
+        flex-shrink: 0;
+        padding: .7em;
+    }
+
+    .sectionThema>div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gap);
+        grid-template-areas:
+            "gridThem1 gridThem2"
+            "gridThem3 gridThem4"
+        ;
+    }
+
+    /* ===============================
+    ==========Page Contacte===========
+    ================================== */
+    .heroConatact {
+        padding-top: 8rem;
+    }
+
+    .sectionContact {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    .parAdr {
+        gap: 2rem;
+    }
+
+    .adr strong {
+        font-size: 1.1em;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+
 }
