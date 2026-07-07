@@ -75,7 +75,9 @@ body.dark .navbar {
 body.dark li a {
     color: var(--color-primary-light);
 }
-
+.d-no{
+    display: none;
+}
 body.dark h1,
 h2,
 h3,
@@ -137,7 +139,6 @@ header {
     border-radius: var(--radius);
     position: fixed;
     top: 1em;
-    border: 1px solid var(--btn-primary);
     box-shadow: 0 0 2px var(--color-accent);
     z-index: 1000;
 }
@@ -154,6 +155,22 @@ img {
 .link a {
     font-size: 1.2em;
     color: var(--text-main);
+    transition: 0.3s ease-in-out;
+}
+
+.btnMenu.active {
+    color: var(--btn-primary);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
+
+.link a:hover {
+    color: var(--btn-primary);
+}
+
+.link a:active {
+    text-decoration: un;
 }
 
 .logo {
@@ -221,6 +238,17 @@ img {
     padding-left: 3rem;
     padding-top: .4rem;
     padding-bottom: .4rem;
+    transition: 0.3s ease-in-out;
+}
+
+.btnPrimary:hover {
+    box-shadow: 0 0 20px var(--btn-primary);
+    transform: translateY(-2px);
+}
+
+.btnPrimary:active {
+    background-color: var(--color-accent);
+    box-shadow: 0 0 20px var(--bg-card);
 }
 
 .btnSecondary {
@@ -232,6 +260,11 @@ img {
     padding-left: 3rem;
     padding-top: .4rem;
     padding-bottom: .4rem;
+    transition: 0.3s ease-in-out;
+}
+
+.btnSecondary:hover {
+    background: linear-gradient(to bottom, #f0629123, #f0629168);
 }
 
 .compteur {
@@ -341,6 +374,17 @@ img {
     gap: 60px;
     width: max-content;
     color: var(--bg-card);
+    animation: mqr 30s linear infinite;
+}
+
+@keyframes mqr {
+    form {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-25%);
+    }
 }
 
 /* =========section PARTICIPER=========== */
@@ -392,6 +436,7 @@ img {
     justify-content: space-between;
     padding: 2em;
     border-radius: var(--radius-lg);
+    transition: 0.3s ease-in-out;
 }
 
 .divGrir2 {
@@ -399,6 +444,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: 0.3s ease-in-out;
 }
 
 .divGrir2 p {
@@ -417,6 +463,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: 0.3s ease-in-out;
 }
 
 .divGrir4 {
@@ -428,6 +475,18 @@ img {
     color: var(--bg-main);
     padding-top: 2em;
     padding-bottom: 2em;
+    transition: 0.3s ease-in-out;
+}
+
+.divGrir1:hover,
+.divGrir3:hover {
+    scale: 1.03;
+    box-shadow: 0 0 2px var(--text-main);
+}
+
+.divGrir2:hover,
+.divGrir4:hover {
+    scale: 1.03;
 }
 
 .sectionPour2 img {
@@ -490,6 +549,11 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.sceIntervenant:hover {
+    scale: 1.05;
 }
 
 .paraIntervene {
@@ -562,15 +626,17 @@ img {
 =============intervenant=========== 
 ===================================*/
 .heroInert {
-    padding-top: 12rem;
+    padding-top: 10rem;
 }
 
 .heroInert h1 {
-    padding-top: 1em;
+    padding-top: 0.5em;
+    font-size: 3em;
 }
 
 .btnsearch {
-    padding-bottom: 5em;
+    padding-bottom: 3em;
+    transition: 0.3s ease-in-out;
 }
 
 .btnsearch button {
@@ -579,7 +645,13 @@ img {
     background-color: transparent;
     color: var(--btn-primary);
     border: 1px solid var(--btn-primary);
-    margin-top: 5em;
+    margin-top: 3em;
+    transition: 0.3s ease-in-out;
+}
+
+.btnsearch button:hover {
+    background: linear-gradient(to bottom, #c2185c61, #c2185caf);
+    color: var(--bg-card);
 }
 
 .allIntervenants {
@@ -593,8 +665,25 @@ img {
 ===========page contact==================
 ========================================= */
 .heroConatact {
-    padding-top: 12rem;
-    padding-bottom: 5em;
+    padding-top: 10rem;
+    padding-bottom: 0em;
+}
+
+.heroConatact span a {
+    color: var(--text-secondary);
+}
+
+.heroConatact span a:hover {
+    color: var(--btn-primary);
+}
+
+.heroInert span a {
+    color: var(--text-secondary);
+    transition: 0.3s ease-in-out;
+}
+
+.heroInert span a:hover {
+    color: var(--btn-primary);
 }
 
 .sectionContact {
@@ -607,7 +696,8 @@ img {
 }
 
 .heroConatact h1 {
-    padding-top: 1em;
+    padding-top: 0.5em;
+    font-size: 3em;
 }
 
 .sectContact {
@@ -654,6 +744,12 @@ label {
     font-weight: bold;
     background-color: var(--text-main);
     border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btnSendInscription button:hover {
+    transform: translateY(-10px);
+    background-color: var(--color-accent);
 }
 
 .adr {
@@ -685,23 +781,76 @@ iframe {
 }
 
 .faq h2 {
-    padding-bottom: 1em;
+    padding-bottom: 1.3em;
 }
 
 .faq {
     padding-bottom: 4em;
 }
 
+.faqItem>input {
+    display: none;
+}
+
+.faqItem {
+    padding: 1em;
+}
+
+.faqItem label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid var(--color-accent);
+    padding: 0.8em 1em;
+    cursor: pointer;
+}
+
+.faqContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faqItem label::after {
+    content: "+";
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.faqItem input:checked~.faqContent {
+    max-height: 15vh;
+    min-height: 10vh;
+    background-color: #fff;
+    border: 0.5px solid var(--text-secondary);
+    padding: 2rem 1em;
+}
+
+.faqItem input:checked+label::after {
+    transform: rotate(45deg);
+}
+
 /* ===============================
 ==============programe============
 ================================== */
 .heroProg {
-    padding-top: 12rem;
-    padding-bottom: 5em;
+    padding-top: 10rem;
+    padding-bottom: 3em;
 }
 
 .heroProg>h1 {
-    padding-top: 1em;
+    padding-top: 0.5em;
+    font-size: 3em;
+}
+
+.heroProg span a {
+    color: var(--text-secondary);
+}
+
+.heroProg span a:hover {
+    color: var(--btn-primary);
 }
 
 .btnpro>button {
@@ -713,6 +862,13 @@ iframe {
     padding-bottom: .7em;
     padding-right: 3em;
     padding-left: 3em;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to bottom, #c2185c61, #c2185caf);
+    color: var(--text-main);
+}
+
+.btnpro>button:hover {
+    background-color: var(--bg-card);
 }
 
 .sectionThema {
@@ -744,6 +900,7 @@ iframe {
     background-color: var(--bg-card);
     border-radius: var(--radius);
     padding: 3em;
+    transition: 0.3s ease-in-out;
 }
 
 .gridThem2 {
@@ -751,6 +908,7 @@ iframe {
     background-color: var(--bg-card);
     border-radius: var(--radius);
     padding: 3em;
+    transition: 0.3s ease-in-out;
 }
 
 .gridThem3 {
@@ -758,6 +916,7 @@ iframe {
     background-color: var(--bg-card);
     border-radius: var(--radius);
     padding: 3em;
+    transition: 0.3s ease-in-out;
 }
 
 .gridThem4 {
@@ -765,6 +924,16 @@ iframe {
     background-color: var(--bg-card);
     border-radius: var(--radius);
     padding: 3em;
+    transition: 0.3s ease-in-out;
+}
+
+.gridThem1:hover,
+.gridThem2:hover,
+.gridThem3:hover,
+.gridThem4:hover {
+    scale: 1.02;
+    cursor: pointer;
+    box-shadow: 0 0 50px var(--border-color);
 }
 
 .gridThem>h2 {
@@ -853,6 +1022,16 @@ footer h2 {
     gap: var(--gap);
 }
 
+.linkSocial a {
+    transition: 0.3s ease-in-out;
+    padding: 0.2em;
+    border-radius: var(--radius-sm);
+}
+
+.linkSocial a:hover {
+    background-color: #c2185c61;
+}
+
 .contfooter {
     display: flex;
     padding-bottom: 2em;
@@ -861,6 +1040,7 @@ footer h2 {
 
 .instagram {
     color: var(--text-main);
+    width: 12vw;
     font-size: 1.3em;
 }
 
@@ -1403,6 +1583,8 @@ footer h2 {
         width: 100%;
         height: 250px;
     }
+}
 
-
+.marque>div {
+    animation: name duration timing-function delay iteration-count direction fill-mode;
 }
