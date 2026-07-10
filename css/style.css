@@ -72,7 +72,7 @@ body.dark {
     --text-secondary: #C9BFDA;
 
     --gradient-primary: linear-gradient(135deg, #9C27B0, #EC1E63);
-    --gradient-hero-bg : linear-gradient(to bottom , #c9bfdaaa , #c9bfdaec);
+    --gradient-hero-bg: linear-gradient(to bottom, #c9bfdaaa, #c9bfdaec);
     --gradient-banner: linear-gradient(90deg, #7B1FA2, #EC1E63);
 
 
@@ -82,21 +82,26 @@ body.dark {
     --btn-primary-hover: #D4185A;
 }
 
-body.dark .navbar{
+body.dark .navbar {
     background-color: var(--bg-card);
 }
-body.dark .marque h1{
+
+body.dark .marque h1 {
     color: var(--bg-main-dark);
 }
+
 body.dark .dvgrid4 {
     color: var(--bg-main-dark);
 }
-body.dark .sectionmod1{
+
+body.dark .sectionmod1 {
     background: var(--gradient-hero-bg);
 }
-body.dark footer{
+
+body.dark footer {
     background: var(--bg-card);
 }
+
 .d-no {
     display: none;
 }
@@ -157,12 +162,12 @@ header {
     padding: 1.5rem;
     z-index: 999;
 
-    opacity: 0;
+    display: none;
 }
 
 #menuMobile.menuMobileActive {
     transition: 0.3s ease;
-    opacity: 1;
+    display: block;
 }
 
 .linkMobile ul {
@@ -728,7 +733,7 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--gap);
-    padding-bottom: 8em; 
+    padding-bottom: 8em;
 }
 
 /* ======================================
@@ -1678,10 +1683,38 @@ footer h2 {
 /* =========================================== */
 /*================pour classliste js============ */
 /* ============================================= */
-.btnremonte{
+.btnremonte {
     opacity: 0;
     transition: 3s ease;
 }
-.btnremonte.btnRmtAfficher{
+
+.btnremonte.btnRmtAfficher {
     opacity: 1;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    padding: 3rem 0;
+}
+
+section.visbleSection {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* filtre  */
+.sceIntervenantAnime {
+    display: none;
+}
+
+.sceIntervenantAnime.visi {
+    display: block;
+}
+/* filtre prohran */
+.pro{
+    display: none;
+}
+.pro.vi{
+    display: block;
 }
