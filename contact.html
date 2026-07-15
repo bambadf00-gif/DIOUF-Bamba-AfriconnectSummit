@@ -58,18 +58,27 @@
         </section>
         <section>
             <div class="container sectionContact">
-                <form action="">
+                <form action="" class="formulaire">
                     <div class="sectContact">
                         <label for="">Nom Complet *</label>
-                        <input type="text" placeholder="Habraham linkone">
+                        <input type="text" id="nomUser" placeholder="Habraham linkone">
+                        <p class="erreurNom textDanger">
+                            erreur : votre nom doit etre superrieur ou egale a 2 caractere
+                        </p>
                     </div>
                     <div class="sectContact">
                         <label for="">Adresse mail *</label>
-                        <input type="email" placeholder="exemple@gmail.com">
+                        <input type="email" id="mailUser" placeholder="exemple@gmail.com">
+                        <p class="erreurMail textDanger">
+                            erreur : le mail saisi est incorrect
+                        </p>
                     </div>
                     <div class="sectContact">
                         <label for="">Numero de telephone *</label>
-                        <input type="tel" placeholder="+221 78 888 00 99">
+                        <input type="tel" id="telUser" placeholder="+221 78 888 00 99">
+                        <p class="erreurTel textDanger">
+                            erreur : le tel saisi est incorrect
+                        </p>
                     </div>
                     <div class="sectContact">
                         <label for="">Type de participation *</label>
@@ -98,10 +107,16 @@
                     </div>
                     <div class="sectContact">
                         <label for="message">Message / Motivations *</label>
-                        <textarea placeholder="Pourquoi souhaitez-vous participer ?"></textarea>
+                        <textarea id="message" placeholder="Pourquoi souhaitez-vous participer ?"></textarea>
+                        <p class="erreurMessage textDanger">
+                            erreur : messge doit etre plus de 20 caractere
+                        </p>
                     </div>
                     <div class="btnSendInscription">
-                        <button >Envoyer mon inscription</button>
+                        <button type="submit">Envoyer mon inscription</button>
+                    </div>
+                    <div class="mesVal1">
+                        <strong>Votre message a ete envoye avec succes!</strong>
                     </div>
                 </form>
                 <div class="parAdr">
@@ -276,6 +291,9 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="datfoot container">
+            <p>©<span id="anneeActuelle"></span> AfriConnect Summit. Tous droits réservés.</p>
         </div>
     </footer>
 

@@ -588,7 +588,7 @@ img {
     font-weight: bold;
 }
 
-.sectionPresence>div {
+section .sectionPresence>div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--gap);
@@ -606,6 +606,7 @@ img {
 .sceIntervenant {
     background-color: var(--bg-card);
     border-radius: var(--radius);
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1071,7 +1072,17 @@ table tbody td {
 footer {
     background: linear-gradient(to bottom, #5a1e3584, #5a1e3570);
     padding-top: 5em;
-    padding-bottom: 5em;
+}
+
+footer>div {
+    padding-bottom: 2em;
+}
+
+.datfoot {
+    display: flex;
+    justify-content: start;
+    border-top: 0.5px solid #666666;
+    padding-top: 2em;
 }
 
 footer>div {
@@ -1703,6 +1714,7 @@ section.visbleSection {
     opacity: 1;
     transform: translateY(0);
 }
+
 /* filtre  */
 .sceIntervenantAnime {
     display: none;
@@ -1711,10 +1723,77 @@ section.visbleSection {
 .sceIntervenantAnime.visi {
     display: block;
 }
+
 /* filtre prohran */
-.pro{
+.pro {
     display: none;
 }
-.pro.vi{
+
+.pro.vi {
+    display: block;
+}
+
+.erreurNom,
+.erreurMail,
+.erreurTel,
+.erreurMessage {
+    color: red;
+    display: none;
+}
+
+.mesVal1 {
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 0.4em;
+    color: rgb(38, 245, 38);
+    border: 2px solid rgb(38, 245, 38);
+}
+
+
+.erreurNom.erreurVisible {
+    display: block;
+
+    & input {
+        border: 2px solid red;
+    }
+}
+
+.erreurTel.erreurVisible {
+    display: block;
+
+    & input {
+        border: 2px solid red;
+    }
+}
+
+.erreurMail.erreurVisible {
+    display: block;
+
+    & input {
+        border: 2px solid red;
+    }
+}
+
+.erreurMessage.erreurVisible {
+    display: block;
+
+    & input {
+        border: 2px solid red;
+    }
+}
+
+/* =============================================
+puppup apres validation formulaire
+================================================= */
+.mesVal1 {
+    border: 2px solid rgb(0, 255, 0);
+    padding: .5em 1em;
+    font-size: 1.2em;
+    text-align: center;
+    color: rgb(0, 255, 0);
+    display: none;
+}
+
+.mesVal1.voixme {
     display: block;
 }
